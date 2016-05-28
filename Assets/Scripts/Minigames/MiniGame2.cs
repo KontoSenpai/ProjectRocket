@@ -16,19 +16,17 @@ public class MiniGame2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-
         if (currentStep == 2 && miniGameOver == false)
         {
             GetComponentInParent<MinigameSelection>().nextStep();
             miniGameOver = true;
         }
-	    else if( levers[0].GetComponent<LeverTranslate>().getStep())
+        else
         {
-            currentStep = 1;
-        }
-        else if( levers[1].GetComponent<LeverTranslate>().getStep())
-        {
-            currentStep = 2;
+	        if (levers[0].GetComponent<LeverTranslate>().getStep())
+                currentStep = 1;
+            if (levers[1].GetComponent<LeverTranslate>().getStep())
+                currentStep = 2;
         }
 	}
 

@@ -51,26 +51,15 @@ public class CircleLever : MonoBehaviour {
                 //Vector3 aimed = particulePosition - transform.position;
 
                 if ( Input.GetAxis("Mouse Y") > 0)
-                {
                     Z += resistance;
-                }
                 else if( Input.GetAxis("Mouse Y") < 0)
-                {
                     Z -= resistance;   
-                }
                 if (Input.GetAxis("Mouse X") > 0)
-                {
                         X += resistance;
-                }
                 else if (Input.GetAxis("Mouse X") < 0)
-                {
                         X -= resistance;
-                }
-
-                print( new Vector3( 0 , X + originalPosition.y, Z + originalPosition.z));
 
                 Vector3 aimed = new Vector3( 0, Z + originalPosition.y, X + originalPosition.z) - transform.position;
-
 
                 source.x = 0;
 

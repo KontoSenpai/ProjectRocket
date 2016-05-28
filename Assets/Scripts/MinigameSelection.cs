@@ -22,6 +22,13 @@ public class MinigameSelection : MonoBehaviour {
         RaycastHit hit;
         GameObject hitObject;
         GameObject parentObject;
+
+        if (!currentGame.GetComponent<MiniGame3>().GetInitialized())
+        {
+            currentGame.GetComponent<MiniGame3>().Instantiate();
+        }
+
+
         if (Physics.Raycast( cam.transform.position, fwd, out hit))
         {
             hitObject = hit.transform.gameObject;
@@ -33,6 +40,8 @@ public class MinigameSelection : MonoBehaviour {
                     handleFirstMinigame(hitObject);
                 else if (currentGame.tag == "Game2")
                     handleSecondMinigame(hitObject);
+                else if (currentGame.tag == "Game3")
+                    handleThirdMinigame(hitObject);
             }
         }
     }
@@ -62,6 +71,17 @@ public class MinigameSelection : MonoBehaviour {
             {
                 hit.GetComponent<LeverTranslate>().setLever(hit);
             }   
+        }
+    }
+
+    public void handleThirdMinigame( GameObject hit)
+    {
+        if( Input.GetMouseButtonDown(0))
+        {
+            if( hit.tag == "Joystick")
+            {
+                hit.GetComponent<JoystickPlaneOrientation>().setJoystick(hit);
+            }
         }
     }
 }
