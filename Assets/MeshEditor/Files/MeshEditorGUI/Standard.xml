@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GUI>
+  <element>
+    <name>BackgroundPersonal</name>
+	<x>0</x>
+	<y>0</y>
+	<width>36</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>BackgroundPro</name>
+	<x>36</x>
+	<y>0</y>
+	<width>36</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Cancel</name>
+	<x>0</x>
+	<y>198</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Clear</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Continue</name>
+	<x>36</x>
+	<y>198</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>DeleteSelected</name>
+	<x>0</x>
+	<y>126</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>DeselectAll</name>
+	<x>36</x>
+	<y>108</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>DoubleSided</name>
+	<x>36</x>
+	<y>126</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>EdgeDown</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>20</height>
+  </element>
+
+  <element>
+    <name>EdgeUp</name>
+	<x>20</x>
+	<y>36</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Exit</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>FacetSelected</name>
+	<x>36</x>
+	<y>144</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>FlipX</name>
+	<x>0</x>
+	<y>180</y>
+	<width>18</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>FlipY</name>
+	<x>36</x>
+	<y>180</y>
+	<width>18</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>FlipZ</name>
+	<x>72</x>
+	<y>180</y>
+	<width>18</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>HandlePosition</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>HandleXYZ</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>InvertSelected</name>
+	<x>72</x>
+	<y>108</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Lock</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>MeshInfo</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>MeshName</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>MeshTools</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>NormalizeScale</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Options</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Orientation</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>PivotPoint</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>ReverseSelected</name>
+	<x>72</x>
+	<y>126</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Revert</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>RotateDown</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>RotateUp</name>
+	<x>36</x>
+	<y>72</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>SaveMesh</name>
+	<x>0</x>
+	<y>18</y>
+	<width>57</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>SavePrefab</name>
+	<x>72</x>
+	<y>18</y>
+	<width>57</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>ScaleDown</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>ScaleUp</name>
+	<x>72</x>
+	<y>72</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>SelectAll</name>
+	<x>0</x>
+	<y>108</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Settings</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>SmoothSelected</name>
+	<x>0</x>
+	<y>144</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>SnapToGrid</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>SubdivideEdges</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>SubdivideTriangles</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>TextureDown</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>20</height>
+  </element>
+
+  <element>
+    <name>TextureUp</name>
+	<x>60</x>
+	<y>36</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>TranslateDown</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>TranslateUp</name>
+	<x>0</x>
+	<y>72</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>TriangleDown</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>20</height>
+  </element>
+
+  <element>
+    <name>TriangleUp</name>
+	<x>40</x>
+	<y>36</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>Unlock</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>UnWeldAllVertices</name>
+	<x>72</x>
+	<y>144</y>
+	<width>31</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>UnWeldSelectedVertices</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>VertexDown</name>
+	<x>0</x>
+	<y>0</y>
+	<width>18</width>
+	<height>20</height>
+  </element>
+
+  <element>
+    <name>VertexUp</name>
+	<x>0</x>
+	<y>36</y>
+	<width>20</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>WeldAllVertices</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>  
+
+  <element>
+    <name>WeldSelectedVertices</name>
+	<x>0</x>
+	<y>0</y>
+	<width>30</width>
+	<height>18</height>
+  </element>
+
+  <element>
+    <name>UVDown</name>
+	<x>100</x>
+	<y>36</y>
+	<width>20</width>
+	<height>20</height>
+  </element>    
+  
+  <element>
+    <name>UVUp</name>
+	<x>80</x>
+	<y>36</y>
+	<width>20</width>
+	<height>18</height>
+  </element>    
+</GUI>
