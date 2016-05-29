@@ -46,9 +46,12 @@ public class JoystickPlaneOrientation : MonoBehaviour {
             RotateRocket();
         }
 
-        TriggerLight();
-        pivot.transform.rotation = baseRotation;
-        pivot.transform.Rotate( new Vector3(pivotRotY, 0, pivotRotX));
+        if( GetComponentInParent<MiniGame3>().GetInitialized())
+        {
+            TriggerLight();
+            pivot.transform.rotation = baseRotation;
+            pivot.transform.Rotate(new Vector3(pivotRotY, 0, pivotRotX));
+        }
     }
 
     public void setStarted()
@@ -183,7 +186,6 @@ public class JoystickPlaneOrientation : MonoBehaviour {
 
     public void setJoystick(GameObject hitObject)
     {
-
         joyStick = hitObject;
     }
 

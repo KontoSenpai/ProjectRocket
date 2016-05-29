@@ -23,12 +23,6 @@ public class MinigameSelection : MonoBehaviour {
         GameObject hitObject;
         GameObject parentObject;
 
-        if (!currentGame.GetComponent<MiniGame3>().GetInitialized())
-        {
-            currentGame.GetComponent<MiniGame3>().Instantiate();
-        }
-
-
         if (Physics.Raycast( cam.transform.position, fwd, out hit))
         {
             hitObject = hit.transform.gameObject;
@@ -41,7 +35,12 @@ public class MinigameSelection : MonoBehaviour {
                 else if (currentGame.tag == "Game2")
                     handleSecondMinigame(hitObject);
                 else if (currentGame.tag == "Game3")
+                {
+                    if (!currentGame.GetComponent<MiniGame3>().GetInitialized())
+                        currentGame.GetComponent<MiniGame3>().Instantiate();
                     handleThirdMinigame(hitObject);
+                }
+
             }
         }
     }
