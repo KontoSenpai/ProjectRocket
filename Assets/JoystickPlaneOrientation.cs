@@ -45,15 +45,16 @@ public class JoystickPlaneOrientation : MonoBehaviour {
             RotateJoystick();
             RotateRocket();
         }
-
-        TriggerLight();
-        pivot.transform.rotation = baseRotation;
-        pivot.transform.Rotate( new Vector3(pivotRotY, 0, pivotRotX));
+        if (GetComponentInParent<MiniGame3>().GetInitialized())
+        {
+            TriggerLight();
+            pivot.transform.rotation = baseRotation;
+            pivot.transform.Rotate(new Vector3(pivotRotY, 0, pivotRotX));
+        }
     }
 
     public void setStarted()
     {
-        print("KEK");
         float randomRot = Random.Range(10, 30);
 
         if (Random.value > 0.5)
@@ -141,7 +142,6 @@ public class JoystickPlaneOrientation : MonoBehaviour {
 
     private void TriggerLight()
     {
-        print(xRot);
         if( xRot >= -5 && xRot <= 5)
         {
             changeLightMaterial(associatedLights[0], true);

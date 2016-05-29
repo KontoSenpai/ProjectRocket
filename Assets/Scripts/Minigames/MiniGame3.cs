@@ -17,7 +17,6 @@ public class MiniGame3 : MonoBehaviour {
 	void Update ()
     {
 	}
-
     public bool GetInitialized()
     {
         return minigameInstantiate;
