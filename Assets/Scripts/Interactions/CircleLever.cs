@@ -44,8 +44,9 @@ public class CircleLever : MonoBehaviour {
 
             if (circleLever != null)
             {
-
-                Vector3 source = originalPosition - transform.position;
+                Vector3 currentPosition = originalPosition;
+                currentPosition.y += transform.position.y;
+                Vector3 source = currentPosition - transform.position;
 
                 if ( Input.GetAxis("Mouse Y") > 0)
                     Z += resistance;
@@ -56,7 +57,7 @@ public class CircleLever : MonoBehaviour {
                 else if (Input.GetAxis("Mouse X") < 0)
                         X -= resistance;
 
-                Vector3 aimed = new Vector3( 0, Z + originalPosition.y, X + originalPosition.z) - transform.position;
+                Vector3 aimed = new Vector3( 0, Z + currentPosition.y, X + currentPosition.z) - transform.position;
 
                 source.x = 0;
 
