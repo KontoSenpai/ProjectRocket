@@ -11,6 +11,7 @@ public class LeverTranslate : MonoBehaviour {
 
     private Vector3 originalPosition;
     private GameObject lever;
+    private float total = 0;
     private bool stepOver;
 
 	// Use this for initialization
@@ -29,12 +30,12 @@ public class LeverTranslate : MonoBehaviour {
 
         if( lever != null && stepOver == false && lever == GetComponentInParent<MiniGame2>().getLever())
         {
-            if( right == true && lever.transform.position.x >= originalPosition.x + 0.260)
+            if( right == true && lever.transform.position.x >= originalPosition.x + 0.180)
             {
                 changeLightMaterial();
                 stepOver = true;
             }
-            else if( right == false && lever.transform.position.x <= originalPosition.x - 0.260)
+            else if( right == false && lever.transform.position.x <= originalPosition.x - 0.180)
             {
                 changeLightMaterial();
                 stepOver = true;
@@ -42,17 +43,29 @@ public class LeverTranslate : MonoBehaviour {
 
             if (right == true)
             {
-                if ( Input.GetAxis("Mouse X") > 0)
-                    lever.transform.position = new Vector3( lever.transform.position.x + resistance, lever.transform.position.y, lever.transform.position.z);
-                else if( Input.GetAxis("Mouse X") < 0 && lever.transform.position.x > originalPosition.x)
-                    lever.transform.position = new Vector3(lever.transform.position.x - resistance, lever.transform.position.y, lever.transform.position.z);
+                if (Input.GetAxis("Mouse X") > 0)
+                {
+                    lever.transform.Translate( new Vector3( 0, 0, -resistance), Space.Self);
+                    total -= resistance;
+                }
+                else if( Input.GetAxis("Mouse X") < 0 && total > 0)
+                {
+                    lever.transform.Translate( new Vector3( 0, 0, resistance), Space.Self);
+                    total += resistance;
+                }
             }
             else
             {
                 if( Input.GetAxis("Mouse X") < 0)
-                    lever.transform.position = new Vector3(lever.transform.position.x - resistance, lever.transform.position.y, lever.transform.position.z);
-                else if( Input.GetAxis("Mouse X") > 0 && lever.transform.position.x < originalPosition.x)
-                    lever.transform.position = new Vector3(lever.transform.position.x + resistance, lever.transform.position.y, lever.transform.position.z);
+                {
+                    lever.transform.Translate(new Vector3(0, 0, resistance), Space.Self);
+                    total += resistance;
+                }
+                else if( Input.GetAxis("Mouse X") > 0 &&  total < 0)
+                {
+                    lever.transform.Translate(new Vector3(0, 0, -resistance), Space.Self);
+                    total -= resistance;
+                }
             }
         }
 	}

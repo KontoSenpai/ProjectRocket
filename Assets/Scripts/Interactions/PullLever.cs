@@ -69,7 +69,7 @@ public class PullLever : MonoBehaviour {
             }
             else if( (step1 == true && step2 == false) && GetComponentInParent<MiniGame1>().getMiniGameStep() == 3)
             {
-                if (keyUp == true && pos >= basePos)
+                if (keyUp == true && pos > basePos)
                 {
                     lever.transform.Translate(new Vector3(0, -0.01f, 0), Space.Self);
                     pos -= 0.01f;

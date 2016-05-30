@@ -14,7 +14,6 @@ public class CircleLever : MonoBehaviour {
 
     private Vector3 originalPosition;
     private Quaternion originalTransform;
-    private Vector3 particulePosition;
 
     private float currentAngle = 0;
     private float finalAngle = -170;
@@ -45,10 +44,8 @@ public class CircleLever : MonoBehaviour {
 
             if (circleLever != null)
             {
-                particulePosition = pointeur.transform.position;
 
                 Vector3 source = originalPosition - transform.position;
-                //Vector3 aimed = particulePosition - transform.position;
 
                 if ( Input.GetAxis("Mouse Y") > 0)
                     Z += resistance;
@@ -69,7 +66,7 @@ public class CircleLever : MonoBehaviour {
                     currentAngle = Vector3.Angle(aimed, source);
 
                 transform.rotation = originalTransform;
-                transform.Rotate(new Vector3(0, 1, 0), currentAngle);
+                transform.Rotate(new Vector3(0, 1, 0), currentAngle, Space.Self);
 
                 if ( currentAngle <= finalAngle + 10)
                 {

@@ -26,22 +26,25 @@ public class MinigameSelection : MonoBehaviour {
         if (Physics.Raycast( cam.transform.position, fwd, out hit))
         {
             hitObject = hit.transform.gameObject;
-            parentObject = hitObject.transform.parent.gameObject;
-            //Si l'élément parent selectionné est le mini-jeu actif
-            if( parentObject.tag == currentGame.tag)
+            if( hit.transform.parent != null)
             {
-                if (currentGame.tag == "Game1")
-                    handleFirstMinigame(hitObject);
-                else if (currentGame.tag == "Game2")
-                    handleSecondMinigame(hitObject);
-                else if (currentGame.tag == "Game3")
+                parentObject = hitObject.transform.parent.gameObject;
+                //Si l'élément parent selectionné est le mini-jeu actif
+                if (parentObject.tag == currentGame.tag)
                 {
-                    if (!currentGame.GetComponent<MiniGame3>().GetInitialized())
-                        currentGame.GetComponent<MiniGame3>().Instantiate();
-                    handleThirdMinigame(hitObject);
+                    if (currentGame.tag == "Game1")
+                        handleFirstMinigame(hitObject);
+                    else if (currentGame.tag == "Game2")
+                        handleSecondMinigame(hitObject);
+                    else if (currentGame.tag == "Game3")
+                    {
+                        if (!currentGame.GetComponent<MiniGame3>().GetInitialized())
+                            currentGame.GetComponent<MiniGame3>().Instantiate();
+                        handleThirdMinigame(hitObject);
+                    }
                 }
-
             }
+
         }
     }
 
