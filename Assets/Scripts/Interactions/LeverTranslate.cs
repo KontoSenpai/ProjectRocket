@@ -30,12 +30,12 @@ public class LeverTranslate : MonoBehaviour {
 
         if( lever != null && stepOver == false && lever == GetComponentInParent<MiniGame2>().getLever())
         {
-            if( right == true && lever.transform.position.x >= originalPosition.x + 0.180)
+            if( right == true && lever.transform.position.x >= originalPosition.x + 0.200)
             {
                 changeLightMaterial();
                 stepOver = true;
             }
-            else if( right == false && lever.transform.position.x <= originalPosition.x - 0.180)
+            else if( right == false && lever.transform.position.x <= originalPosition.x - 0.200)
             {
                 changeLightMaterial();
                 stepOver = true;
