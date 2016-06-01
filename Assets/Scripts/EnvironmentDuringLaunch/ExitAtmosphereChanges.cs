@@ -5,10 +5,22 @@ public class ExitAtmosphereChanges : MonoBehaviour {
 
     public Light sun;
 
-    public float intensityOnExit;
+    public float sunIntensityOnExit;
+    public float rocketSpeedOnExit;
 
-    void OnTriggerEnter()
+    public bool deactivateFog;
+
+    void OnTriggerEnter(Collider other)
     {
-        sun.intensity = intensityOnExit;
+        if (other.CompareTag("Player"))
+        {
+            sun.intensity = sunIntensityOnExit;
+
+            other.GetComponentInChildren<Movement>().flyStep = rocketSpeedOnExit;
+            
+            if (deactivateFog)
+                RenderSettings.fog = false;
+        }
+
     }
 }

@@ -3,14 +3,10 @@ using System.Collections;
 
 public class Reward : MonoBehaviour {
 
-    public GameObject fuckYou;
+    public GameObject objectAffectedByReward;
 
-    void Start()
+    public void OnCompletion()
     {
-    }
-
-    void Update()
-    {
-
+         
     }
 }
