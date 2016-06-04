@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour {
 
     private float startTime = -1.0f;
 
+    private bool flying = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -36,14 +38,11 @@ public class Movement : MonoBehaviour {
         //    flyStep = baseFlyStep;
         //}
 
-
-        Debug.Log(flyStep);
-
         if (startTime != -1.0f)
         {
             if (Time.realtimeSinceStartup - startTime > updateFrequency)
             {
-                if (SkyboxMaterial)
+                if (SkyboxMaterial && flying)
                 {
                     transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + flyStep, transform.localPosition.z);
                     //float atmosphereThickness = RenderSettings.skybox.GetFloat("_AtmosphereThickness");
@@ -62,4 +61,9 @@ public class Movement : MonoBehaviour {
             startTime = Time.realtimeSinceStartup;
         }
 	}
+
+    public void setFlying()
+    {
+        flying = true;
+    }
 }

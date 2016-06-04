@@ -71,22 +71,19 @@ public class JoystickPlaneOrientation : MonoBehaviour {
     public void setStarted()
     {
         float randomRot = Random.Range(10, 30);
-
         if (Random.value > 0.5)
         {
-            planes[0].transform.Rotate(new Vector3(0, randomRot, 0));
+            planes[0].transform.Rotate(new Vector3(0, -randomRot, 0));
             fusay.transform.Rotate(new Vector3(randomRot, 0, 0), Space.Self);
             xRot += randomRot;
         }
         else
         {
-            planes[0].transform.Rotate(new Vector3(0, -randomRot, 0));
+            planes[0].transform.Rotate(new Vector3(0, randomRot, 0));
             fusay.transform.Rotate(new Vector3(-randomRot, 0, 0), Space.Self);
             xRot -= randomRot;
         }
-
         randomRot = Random.Range(10, 30);
-
         if (Random.value > 0.5)
         {
             planes[1].transform.Rotate(new Vector3(0, randomRot, 0));
@@ -99,7 +96,6 @@ public class JoystickPlaneOrientation : MonoBehaviour {
             fusay.transform.Rotate(new Vector3(0, 0, -randomRot), Space.Self);
             yRot = -randomRot;
         }
-
     }
     
     private void RotateJoystick()
@@ -132,7 +128,6 @@ public class JoystickPlaneOrientation : MonoBehaviour {
             {
                 pivotRotY -= 1f;
             }
-
         }
     }
 
@@ -141,12 +136,12 @@ public class JoystickPlaneOrientation : MonoBehaviour {
         if (pivotRotX > 0 && xRot < 50)
         {
             planes[0].transform.Rotate(new Vector3(0, -resistance, 0));
-            xRot -= resistance;
+            xRot += resistance;
         }
         else if (pivotRotX < 0 && xRot > -50)
         {
             planes[0].transform.Rotate(new Vector3(0, resistance, 0));
-            xRot += resistance;
+            xRot -= resistance;
         }
         if (pivotRotY > 0 && yRot < 50)
         {
